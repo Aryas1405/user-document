@@ -3,7 +3,10 @@ node_modules/
 dist/
 build/
 
+
 .env
 
 test-results/
 jest-report.html
+
+uploads/
