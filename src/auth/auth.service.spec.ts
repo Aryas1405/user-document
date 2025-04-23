@@ -3,7 +3,7 @@ import { JwtService } from '@nestjs/jwt';
 import { UserService } from 'src/user/user.service';
 import { UnauthorizedException } from '@nestjs/common';
 import * as bcrypt from 'bcrypt';
-import { UserRole } from 'src/utills/contant';
+import { UserRole } from 'src/utills/constant';
 
 jest.mock('bcrypt');
 

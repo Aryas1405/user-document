@@ -1,5 +1,5 @@
 import { IsNumber, IsString } from 'class-validator';
-import { UserRole } from 'src/utills/contant';
+import { UserRole } from 'src/utills/constant';
 
 export class UpdateDocument {
     @IsString()

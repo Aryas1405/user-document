@@ -1,12 +1,21 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { PythonRagService } from './python-rag.service';
+import { HttpService } from '@nestjs/axios';
 
 describe('PythonRagService', () => {
   let service: PythonRagService;
 
+  const mockHttpService = {
+    post: jest.fn(),
+    get: jest.fn(),
+  };
+
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [PythonRagService],
+      providers: [
+        PythonRagService,
+        { provide: HttpService, useValue: mockHttpService },
+      ],
     }).compile();
 
     service = module.get<PythonRagService>(PythonRagService);

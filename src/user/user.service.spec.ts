@@ -1,9 +1,10 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { UserService } from './user.service';
 import { getRepositoryToken } from '@nestjs/typeorm';
-import { User, UserRole } from './entities/user.entity';
+import { User } from './entities/user.entity';
 import { Repository } from 'typeorm';
 import { BadRequestException } from '@nestjs/common';
+import { UserRole } from 'src/utills/constant';
 
 describe('UserService', () => {
   let userService: UserService;

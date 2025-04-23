@@ -18,7 +18,7 @@ import { AskQuestion } from './dto/document.dto';
 import {AuthGuard} from './../middleware/auth.guard';
 import {RoleGuard} from './../middleware/role.guard';
 import { Roles } from 'src/middleware/roles.decorator';
-import { UserRole } from 'src/utills/contant';
+import { UserRole } from 'src/utills/constant';
 
 @UseGuards(AuthGuard, RoleGuard)
 @Controller('document')
